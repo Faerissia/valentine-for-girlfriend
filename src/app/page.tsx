@@ -39,11 +39,24 @@ export default function Home() {
         </>
       ) : (
         <>
-          <img
-            src="https://media.tenor.com/vknNeIAWurIAAAAi/tkthao219-bear.gif"
-            alt="bear-asking"
-          />
-          <div className="val-text">ตะเล็กรักพี่ไหมงับ?</div>
+          {noCount > 0 ? (
+            <img
+              src="https://media.tenor.com/WWiCzxfs-P8AAAAi/tkthao219-bubududu.gif"
+              alt="bear-asking"
+            />
+          ) : (
+            <img
+              src="https://media.tenor.com/vknNeIAWurIAAAAi/tkthao219-bear.gif"
+              alt="bear-asking"
+            />
+          )}
+
+          {noCount > 0 ? (
+            <div className="val-text">ตะเล็กไม่รักพี่จริงๆเหรออ?</div>
+          ) : (
+            <div className="val-text">ตะเล็กรักพี่ไหมงับ?</div>
+          )}
+
           <div>
             <button
               className="button yes-button"
